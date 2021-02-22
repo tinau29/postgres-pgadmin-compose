@@ -16,7 +16,7 @@ services:
       - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
       - TZ=Asia/Jakarta
     ports:
-      - "${DATABASE_PORT: -5444}:5432"
+      - "${DATABASE_PORT:-5444}:5432"
     restart: unless-stopped
 
   pgadmin:
@@ -28,7 +28,7 @@ services:
     volumes:
       - pgadmin:/root/.pgadmin
     ports:
-      - "${PGADMIN_PORT: -3030}:80"
+      - "${PGADMIN_PORT:-3030}:80"
     networks:
       - postgres
     restart: unless-stopped
