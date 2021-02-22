@@ -27,7 +27,7 @@ sed -i "s/^GROUPS=.*/GROUPS=$GROUPS/" .env
 docker-compose up -d
 ```
 
-# Access To PgDdmin
+# Access To PgAdmin
 ```bash
 http://localhost:3030
 ```
